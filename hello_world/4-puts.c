@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-/* ...... used the function puts
- * return value (o) ......*/
+/* ...... comment.......*/
 
 int main(void)
 {
