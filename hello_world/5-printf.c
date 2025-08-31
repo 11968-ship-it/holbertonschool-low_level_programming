@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 /*
- * main - Entry point
- * 
- * Description: 'this function prints the text'
- * @parameter: describe the parameter
- * 
- * Return: Always 0 (Success)
- */
+* main - Entry point
+*
+* Description: 'this function prints the text'
+* @parameter: describe the parameter
+*
+* Return: Always 0 (Success)
+*/
 
 int main(void)
 {
