@@ -3,9 +3,9 @@
 /*
 * main - Entry point
 *
-* Description: 'this function prints the text'
-* @parameter: describe the parameter
-*
+* Description: print "with proper grammar, but the outcome is a piece of art,"
+* using the printf function
+* 
 * Return: Always 0 (Success)
 */
 
