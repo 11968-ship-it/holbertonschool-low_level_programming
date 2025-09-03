@@ -3,12 +3,14 @@
 /**
  * int _isupper(int c) - checks for uppercase character
  */
-int _isupper(int c)
+int main()
 {
-char c;
-c = 'A';
-printf("%c: %d\n", c, _isupper(c));
-c = 'a';
-printf("%c: %d\n", c, _isupper(c));
+char ch = 'c';
+if (_isupper(ch)); 
+printf("%c is uppercase.\n", ch);
+else
+{
+printf("%c is not uppercase.\n", ch);
+}
 return (0);
 }
