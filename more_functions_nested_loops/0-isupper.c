@@ -3,7 +3,7 @@
 /**
  * int _isupper(int c) - checks for uppercase character
  */
-int _isupper(int c);
+int _isupper(int c)
 {
 char c;
 c = 'A';
