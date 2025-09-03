@@ -3,10 +3,10 @@
 /**
  * int _isupper(int c) - checks for uppercase character
  */
-int main()
+int _isupper(char c)
 {
 char ch = 'c';
-if (_isupper(ch)); 
+if (_isupper(ch))
 printf("%c is uppercase.\n", ch);
 else
 {
