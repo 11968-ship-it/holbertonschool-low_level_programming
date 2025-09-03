@@ -10,5 +10,4 @@ char letter;
 for (letter = 'a'; c <= 'z'; letter++)
 _putchar(letter);
 _putchar('\n');
-return 0;
 }
