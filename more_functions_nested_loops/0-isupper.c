@@ -1,9 +1,10 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
  * int _isupper(int c) - checks for uppercase character
  */
-int _isupper(char c)
+int main()
 {
 char ch = 'c';
 if (_isupper(ch))
