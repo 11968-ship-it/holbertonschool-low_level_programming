@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * mul - Multiplies two iintgers
+ * mul - Multiplies two intgers
  * 
- * Description: Treturns 1 if the input digit
- * Return: 1 if c is digit, 0 otherwise
+ * @a: The first integer
+ * @b: The second integer
  */
 
 int mul(int a, int b)
