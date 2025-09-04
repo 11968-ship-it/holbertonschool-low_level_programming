@@ -7,7 +7,7 @@
 
 void print_numbers(void)
 {
-char digits[] = "0123456789\n";
+char digits[] = "0123456789";
 int i = 0;
 while (digits[i] != '\0')
 {
