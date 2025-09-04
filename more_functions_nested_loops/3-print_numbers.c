@@ -7,8 +7,12 @@
 
 void print_numbers(void)
 {
-int i;
-for (i = 0; i <= '9'; i++)
-_putchar(i + '0');
+char digits[] = "0123456789\n";
+int i = 0;
+while (digits[i] != '\0')
+{
+_putchar(digits[i]);
+i++;
+}
 _putchar('\n');
 }
