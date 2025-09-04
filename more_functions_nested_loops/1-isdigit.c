@@ -9,7 +9,8 @@
 
 int _isdigit(int c)
 {
-if (c == 'A' && c != 'Z')
+char c = '6';
+if (_isdigit(c))
 return (1);
 else
 return (0);
