@@ -9,8 +9,12 @@
 
 void print_numbers(void)
 {
-if (c >= '0' && c <= '9')
-return (1);
-else
+char str[] = "_putchar";
+int i;
+for (i = 0; str[i] != '\0'; i++)
+{
+_putchar(str[i]);
+}
+_putchar('\n');
 return (0);
 }
