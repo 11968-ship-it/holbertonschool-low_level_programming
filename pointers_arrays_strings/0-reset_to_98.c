@@ -3,12 +3,10 @@
 /**
 * reset_to_98: A function that takes a pointer to an int as parameter and
 * updates the value it points to to 98.
-*
+*@n: pointer to int
 */
 
 void reset_to_98(int *n)
 {
-int n;
-int * p = &n;
-printf(" p = %x \n", p);
+*n = 98;
 }
