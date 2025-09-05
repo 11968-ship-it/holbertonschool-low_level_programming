@@ -24,5 +24,5 @@ i++;
 }
 if (sign == 1)
 result = -result;
-return result;
+return (result);
 }
