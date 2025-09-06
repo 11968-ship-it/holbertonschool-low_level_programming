@@ -5,8 +5,9 @@
  * @a: Pointer to the array of integers.
  * @n: The number of elements in the array.
  *
- * Description: The function swaps the elements of the array such that the first
- * element becomes the last, the second becomes the second-to-last
+ * Description: The function swaps the elements of the array such that
+ * the first element becomes the last, the second becomes the
+ * second-to-last
  *
  * Return: Nothing
  */
