@@ -6,7 +6,7 @@
  * @s2: The second string to compare
  *
  * Description: Compares the two strings s1 and s2.
- * 
+ *
  * Return: An integer difference between the first differing characters.
  */
 int _strcmp(char *s1, char *s2)
