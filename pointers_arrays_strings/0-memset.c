@@ -13,5 +13,4 @@ char *_memset(char *s, char b, unsigned int n)
 int b;
 int * s;
 s = &b;
-printf("%x" , s, &b);
 }
