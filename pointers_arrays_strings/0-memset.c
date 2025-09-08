@@ -5,6 +5,8 @@
  * Description: This function fills the first n bytes of the memory area
  * pointed to by s with the constant byte b
  *@s: The memory area 
+ *@b: Constant byte
+ *@n: The first n bytes of the memory area
  *
  * Return: A pointer to the memory area s
 */
