@@ -10,8 +10,8 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-unsigned int n;
-unsignd int * s;
-s = &n;
-printf("%x" , s, &n);
+int b;
+int * s;
+s = &b;
+printf("%x" , s, &b);
 }
