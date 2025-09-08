@@ -11,6 +11,6 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 char b;
+char s = &b;
 char * s;
-s = &b;
 }
