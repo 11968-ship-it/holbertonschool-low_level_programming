@@ -8,5 +8,5 @@
  */
 void print_chessboard(char (*a)[8])
 {
-int board[][];
+char board[8][8];
 }
