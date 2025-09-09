@@ -3,8 +3,8 @@
 
 /**
  * _strstr - Function that locates a substring
- * @?: A pointer to the string to be scanned
- * @needle: A pointer to the string that contains the bytes
+ * @haystack: The main string to search within
+ * @needle: The substring to search for
  *
  * Description: Searches the first occurrence of substring
  * needle in haystack string then returns a pointer to the
