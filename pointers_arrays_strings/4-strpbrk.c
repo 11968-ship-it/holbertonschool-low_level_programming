@@ -12,15 +12,15 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+int i;
 while (*s)
 {
-if (*s == c);
+for (i = 0; accept[i]; i++)
+{
+if (*s == accept[i])
 return (s);
+}
 s++;
 }
-{
-if (c == '\0');
-}
-return (s);
 return (0);
 }
