@@ -2,10 +2,12 @@
 
 /**
  * _strpbrk - Function that searches a string
- * 
- * Description: Searches a string for any of a set of bytes
- * @s: The string to search
- * @c: The character to find
+ * @s: A pointer to the string to be scanned
+ * @accept: A pointer to the string that contains the bytes
+ *
+ * Description: It locates the first occurrence in the string s
+ * then returns a pointer to the bytes in s that matches one
+ *  of the bytes in accept or NULL if no such byte is found
  *
  * Return: a pointer to the byte in s that matches one of
  * the bytes in accept, or NULL if no such byte is found
