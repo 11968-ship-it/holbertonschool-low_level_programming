@@ -9,10 +9,6 @@
 */
 void _puts_recursion(char *s)
 {
-char b = Puts with recursion;
-char *s = &b;
-_putchar(char *s);
-{
+if (
 _putchar('\n');
-}
 }
