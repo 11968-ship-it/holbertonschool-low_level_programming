@@ -28,5 +28,5 @@ if (needle[i] == '\0')
 return (haystack);
 haystack++;
 }
-return (NULL);
+return (0);
 }
