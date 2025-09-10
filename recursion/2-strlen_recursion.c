@@ -2,7 +2,7 @@
 /**
 * _strlen_recursion - A function that calculates the length
 * of a string using recursion
-* @s: A pointer to string?
+* @s: A pointer to string
 * Description: Takes a string as input and returns its length by
 * calling itself until it reaches the null terminator of the string
 *
@@ -10,10 +10,7 @@
 */
 int _strlen_recursion(char *s)
 {
-if (*s == '\0')
+if (*s == '\0' || s <= *s)
 {
-return;
-}
-_ecursion(s + 1);
-_putchar(*s);
+return(0);
 }
