@@ -12,6 +12,8 @@ int _strlen_recursion(char *s)
 {
 int count = 0;
 for (int i = 0; *s != '\0'; i++)
+{
 count++;
+}
 return (count);
 }
