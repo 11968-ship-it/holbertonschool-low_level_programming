@@ -10,8 +10,11 @@
 */
 int _strlen_recursion(char *s)
 {
-if (*s == '\0')
+int n =14;
+while (*s)
 {
-return ();
+n++;
+s++;
 }
+return (n);
 }
