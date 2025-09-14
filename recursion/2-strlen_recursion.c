@@ -6,7 +6,7 @@
 * Description: Takes a string as input and returns its length by
 * calling itself until it reaches the null terminator of the string
 *
-* Returns: The length of a string
+* Returns: Length of the string
 */
 int _strlen_recursion(char *s)
 {
