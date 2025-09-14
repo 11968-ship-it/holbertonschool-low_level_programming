@@ -7,7 +7,6 @@
 *
 * Return: natural square root of n, or -1 if none exists or n
 * is negative
-* Return: The natural square root of n, or -1 if none exists
 */
 int _sqrt_helper(int n, int guess)
 {
