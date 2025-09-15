@@ -17,5 +17,5 @@ else if
 {
 return (0)
 }
-return (_sqrt_helper(n, 1));
+return (is_prime_number(n));
 }
