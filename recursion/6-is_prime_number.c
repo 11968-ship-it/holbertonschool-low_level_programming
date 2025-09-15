@@ -13,7 +13,7 @@ if (n > 1 && n / n)
 {
 return (1);
 }
-else if (n < 1 && n != n)
+else if (n < 1 && n != n/n)
 {
 return (0);
 }
