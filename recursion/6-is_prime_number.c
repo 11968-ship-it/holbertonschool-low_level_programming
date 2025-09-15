@@ -9,11 +9,11 @@
 */
 int is_prime_number(int n)
 {
-if (n > 1 && n % n)
+if (n > 1 && n / n)
 {
 return (1);
 }
-else
+else if (n < 1 && n != n)
 {
 return (0);
 }
