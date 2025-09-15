@@ -13,7 +13,7 @@ if (n > 1 && n % n)
 {
 return (1);
 }
-else if
+else
 {
 return (0)
 }
