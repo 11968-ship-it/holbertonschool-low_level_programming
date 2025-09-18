@@ -8,7 +8,7 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-my_dog = {"Poppy", 3.5};
+struct dog = 'my_dog';
 return (0);
 }
 
