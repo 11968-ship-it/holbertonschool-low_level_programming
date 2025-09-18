@@ -3,9 +3,18 @@
 /**
 *
 *
+*
+*
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-struct dog = my_dog;
-printf(*name, age);
+struct dog my_dog =
+{
+&my_dog,
+"Poppy",
+3.5,
+"Bob"
 }
+
+//printf(*name, age);
+
