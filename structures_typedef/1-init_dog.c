@@ -8,12 +8,8 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-struct dog my_dog =
-{
-&my_dog,
-"Poppy",
-3.5,
-"Bob"
+struct dog my_dog = {"Poppy", 3.5};
+return (0);
 }
 
 //printf(*name, age);
