@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "2-calc.h"
+#include "3-calc.h"
 /**
  * main - Performs simple operations given 3 arguments:
  * operand1 operator operand2
