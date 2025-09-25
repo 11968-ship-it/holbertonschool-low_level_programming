@@ -16,4 +16,3 @@ else
 {
 return (sum_them_all(const unsigned int n, ...));
 }
-}
