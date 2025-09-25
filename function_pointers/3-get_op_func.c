@@ -21,8 +21,8 @@ int i = 0;
 while (ops[i].op)
 {
 if (ops[i].op[0] == s[0] && s[1] == '\0')
-return ops[i].f;
+return (ops[i].f);
 i++;
 }
-return NULL;
+return (NULL);
 }
