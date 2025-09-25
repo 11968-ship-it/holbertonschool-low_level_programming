@@ -12,6 +12,6 @@ if (n == 0)
 return (0);
 else
 {
-return;
+return (sum);
 }
 }
