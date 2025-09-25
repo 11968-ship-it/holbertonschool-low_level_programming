@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "2-calc.h"
-
+/**
+ * main - Performs simple operations given 3 arguments:
+ * operand1 operator operand2
+ * @argc: Number of arguments
+ * @argv: Array of arguments
+ *
+ * Return: 0 on success, exits with error code otherwise
+ */
 int main(int argc, char *argv[])
 {
 int a, b;
