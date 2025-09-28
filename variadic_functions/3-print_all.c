@@ -1,5 +1,5 @@
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 /**
  * print_all - Prints anything based on a format string
@@ -22,28 +22,42 @@ void print_all(const char * const format, ...)
 
     while (format && format[i])
     {
-        if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
+        switch (format[i])
         {
-            if (printed)
-                printf(", ");
-            if (format[i] == 'c')
+            case 'c':
+                if (printed)
+                    printf(", ");
                 printf("%c", va_arg(args, int));
-            if (format[i] == 'i')
+                printed = 1;
+                break;
+            case 'i':
+                if (printed)
+                    printf(", ");
                 printf("%d", va_arg(args, int));
-            if (format[i] == 'f')
+                printed = 1;
+                break;
+            case 'f':
+                if (printed)
+                    printf(", ");
                 printf("%f", va_arg(args, double));
-            if (format[i] == 's')
-            {
+                printed = 1;
+                break;
+            case 's':
+                if (printed)
+                    printf(", ");
                 str = va_arg(args, char *);
                 if (!str)
                     printf("(nil)");
                 else
                     printf("%s", str);
-            }
-            printed = 1;
+                printed = 1;
+                break;
+            default:
+                break;
         }
         i++;
     }
+
     va_end(args);
     printf("\n");
 }
