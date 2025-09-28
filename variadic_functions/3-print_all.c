@@ -25,6 +25,7 @@ format[i] == 'f' || format[i] == 's')
 {
 if (printed)
 printf(", ");
+printed = 1;
 if (format[i] == 'c')
 printf("%c", va_arg(args, int));
 if (format[i] == 'i')
@@ -39,7 +40,6 @@ printf("(nil)");
 else
 printf("%s", str);
 }
-printed = 1;
 }
 i++;
 }
