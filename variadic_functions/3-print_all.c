@@ -3,15 +3,14 @@
 #include "variadic_functions.h"
 /**
  * print_all - Prints anything based on a format string
- * @format: A string of characters representing argument types:
+ * @format: String of types of arguments passed:
  * 'c' = char
  * 'i' = integer
  * 'f' = float
  * 's' = string
  *
- * Description: If the string argument is NULL, prints (nil) instead
- * Invalid format characters are ignored.
- * Prints a new line at the end.
+ * Description: Prints (nil) if string is NULL.
+ * Prints a newline at the end. Ignores unknown format characters.
  */
 void print_all(const char * const format, ...)
 {
@@ -21,14 +20,17 @@ char *str;
 va_start(args, format);
 while (format && format[i])
 {
+if (format[i] == 'c' || format[i] == 'i' ||
+format[i] == 'f' || format[i] == 's')
+{
 if (printed)
 printf(", ");
 if (format[i] == 'c')
-printf("%c", va_arg(args, int)), printed = 1;
+printf("%c", va_arg(args, int));
 if (format[i] == 'i')
-printf("%d", va_arg(args, int)), printed = 1;
+printf("%d", va_arg(args, int));
 if (format[i] == 'f')
-printf("%f", va_arg(args, double)), printed = 1;
+printf("%f", va_arg(args, double));
 if (format[i] == 's')
 {
 str = va_arg(args, char *);
@@ -36,6 +38,7 @@ if (!str)
 printf("(nil)");
 else
 printf("%s", str);
+}
 printed = 1;
 }
 i++;
