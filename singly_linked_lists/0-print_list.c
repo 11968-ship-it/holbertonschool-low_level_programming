@@ -15,7 +15,7 @@ while (current != NULL)
 {
 if (current->str == NULL)
 {
-printf ("[0] (nil)\n");
+printf("[0] (nil)\n");
 }
 else
 {
@@ -24,5 +24,5 @@ printf("[%u] %s\n", current->len, current->str);
 current = current->next;
 count++;
 }
-return count;
+return (count);
 }
