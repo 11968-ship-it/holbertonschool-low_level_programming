@@ -15,7 +15,7 @@ unsigned int _strlen(const char *s)
 unsigned int len = 0;
 while (s[len] != '\0')
 len++;
-return len;
+return (len);
 }
 /**
  * add_node - adds a new node at the beginning of a list_t list
