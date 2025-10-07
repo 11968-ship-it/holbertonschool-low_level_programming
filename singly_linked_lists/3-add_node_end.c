@@ -28,7 +28,7 @@ unsigned int len = _strlen(str);
 char *dup = malloc(len + 1);
 unsigned int i;
 if (dup == NULL)
-return NULL;
+return (NULL);
 for (i = 0; i < len; i++)
 dup[i] = str[i];
 dup[len] = '\0';
@@ -49,7 +49,7 @@ list_t *add_node_end(list_t **head, const char *str)
 list_t *new_node, *temp;
 new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
-return NULL;
+return (NULL);
 new_node->str = _strdup(str);
 if (new_node->str == NULL)
 {
