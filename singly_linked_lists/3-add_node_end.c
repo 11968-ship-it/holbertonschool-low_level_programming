@@ -13,7 +13,7 @@ unsigned int _strlen(const char *s)
 unsigned int len = 0;
 while (s[len] != '\0')
 len++;
-return len;
+return (len);
 }
 /**
  * _strdup - Duplicates a string by allocating new memory
@@ -32,7 +32,7 @@ return NULL;
 for (i = 0; i < len; i++)
 dup[i] = str[i];
 dup[len] = '\0';
-return dup;
+return (dup);
 }
 /**
  * add_node_end - Adds a new node at the end of a linked list.
@@ -54,7 +54,7 @@ new_node->str = _strdup(str);
 if (new_node->str == NULL)
 {
 free(new_node);
-return NULL;
+return (NULL);
 }
 new_node->len = _strlen(str);
 new_node->next = NULL;
@@ -69,5 +69,5 @@ while (temp->next != NULL)
 temp = temp->next;
 temp->next = new_node;
 }
-return new_node;
+return (new_node);
 }
