@@ -24,13 +24,3 @@ int main(void)
     print_dlistint(head);
     return (EXIT_SUCCESS);
 }
-julien@ubuntu:~/Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-add_dnodeint_end.c 0-print_dlistint.c -o d
-julien@ubuntu:~/Doubly linked lists$ ./d 
-0
-1
-2
-3
-4
-98
-402
-1024
