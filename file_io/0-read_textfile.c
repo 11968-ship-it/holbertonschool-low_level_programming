@@ -26,14 +26,14 @@ int fd;
 and buffer is a pointer to the memory holding the file data*/
 ssize_t bytes_read, bytes_written;
 char *buffer;
-if (filename == NULL);
+if (filename == NULL)
 return (0);
 /*open the file in read-only mode and store the files descriptor in fd*/
 fd = open(filename, O_RDONLY);
 /*check if opening the file faild returns -1 means ERR then*/
 if (fd == -1)
 /*on any failur/ NUll retrun 0*/
-returen (0);
+return (0);
 /*allocates memory for the buffer*/
 buffer = malloc(sizeof(char) * letters);
 /*check malloc success, if it fails/ NULL close*/
