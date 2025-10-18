@@ -20,7 +20,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 /*
-* an integer that stores the file descriptor returned by open()
+* an integer that stores the file descriptor returned by open
 * to access the opened file
 */
 int fd;
