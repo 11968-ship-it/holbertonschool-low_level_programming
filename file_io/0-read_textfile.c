@@ -9,9 +9,14 @@
 /*prototypes*/
 #include "main.h"
 /**
-*
-*
-*/
+ * read_textfile - Reads a text file and prints it to the POSIX stdout
+ * @filename: The name of the file to read
+ * @letters: The number of letters to read and print
+ *
+ * Return: The actual number of letters read and printed,
+ * or 0 on failure (file can't be opened/read,
+ * filename is NULL, or write fails)
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 /*an integer that stores the file descriptor returned by open()
