@@ -2,11 +2,9 @@
 #include <fcntl.h>
 /*read, write, close*/
 #include <unistd.h>
-/*malloc, free*/
 #include <stdlib.h>
 /*for ssize_t*/
 #include <sys/types.h>
-/*prototypes*/
 #include "main.h"
 /**
  * read_textfile - Reads a text file and prints it to the POSIX stdout
@@ -60,9 +58,9 @@ if (bytes_written == -1 || bytes_written != bytes_read)
 {
 free(buffer);
 close(fd);
-return 0;
+return (0);
 }
 free(buffer);
 close(fd);
-return bytes_written;
+return (bytes_written);
 }
