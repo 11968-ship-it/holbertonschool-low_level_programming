@@ -12,7 +12,8 @@
  */
 int main(int ac, char **av)
 {
-    int fd_from, fd_to, r, w;
+    int fd_from, fd_to, r;
+    ssize_t w, total_written;
     char buffer[BUF_SIZE];
 
     if (ac != 3)
@@ -45,13 +46,18 @@ int main(int ac, char **av)
         }
         if (r == 0)
             break;
-        w = write(fd_to, buffer, r);
-        if (w == -1 || w != r)
+        total_written = 0;
+        while (total_written < r)
         {
-            dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-            close(fd_from);
-            close(fd_to);
-            exit(99);
+            w = write(fd_to, buffer + total_written, r - total_written);
+            if (w == -1)
+            {
+                dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+                close(fd_from);
+                close(fd_to);
+                exit(99);
+            }
+            total_written += w;
         }
     }
     if (close(fd_from) == -1)
