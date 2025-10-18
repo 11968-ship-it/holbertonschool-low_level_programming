@@ -30,9 +30,7 @@ ssize_t bytes_read, bytes_written;
 char *buffer;
 if (filename == NULL)
 return (0);
-/*
-* open the file in read-only mode and store the files descriptor in fd
-*/
+/* open the file in read-only mode and store the files descriptor in fd */
 fd = open(filename, O_RDONLY);
 /*check if opening the file faild returns -1 means ERR then*/
 if (fd == -1)
