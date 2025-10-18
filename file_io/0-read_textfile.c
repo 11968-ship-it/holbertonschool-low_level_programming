@@ -17,15 +17,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-/*
-* an integer that stores the file descriptor returned by open
-* to access the opened file
-*/
 int fd;
-/*
-* they store how many bytes were read from or written to a file,
-* and buffer is a pointer to the memory holding the file data
-*/
 ssize_t bytes_read, bytes_written;
 char *buffer;
 if (filename == NULL)
@@ -38,7 +30,6 @@ if (fd == -1)
 return (0);
 /*allocates memory for the buffer*/
 buffer = malloc(sizeof(char) * letters);
-/*check malloc success, if it fails/ NULL close*/
 if (buffer == NULL)
 {
 close(fd);
