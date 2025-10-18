@@ -19,8 +19,9 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-/*an integer that stores the file descriptor returned by open()
-to access the opened file*/
+/* an integer that stores the file descriptor returned by open()
+* to access the opened file
+*/
 int fd;
 /*they store how many bytes were read from or written to a file,
 and buffer is a pointer to the memory holding the file data*/
