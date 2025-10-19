@@ -3,11 +3,12 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/stat.h>
+#include <errno.h>
 
 #define BUFFER_SIZE 1024
 
 /**
- * error_exit - Print an error message to stderr and exit with the given code (string argument)
+ * error_exit - Print an error message to stderr and exit with the given code (string arg)
  */
 void error_exit(int code, const char *message, const char *arg)
 {
@@ -25,12 +26,38 @@ void error_exit_fd(int code, const char *message, int fd)
 }
 
 /**
+ * write_all - Robustly writes all bytes to a file descriptor
+ * @fd: File descriptor to write to
+ * @name: Name of the output file (for error messages)
+ * @buf: Buffer to write
+ * @n: Number of bytes to write
+ */
+static void write_all(int fd, const char *name, const char *buf, ssize_t n)
+{
+	ssize_t off = 0, w;
+
+	while (off < n)
+	{
+		do {
+			w = write(fd, buf + off, n - off);
+		} while (w == -1 && errno == EINTR);
+
+		if (w == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
+			exit(99);
+		}
+		off += w;
+	}
+}
+
+/**
  * main - Copies the contents of a file to another file.
  */
 int main(int argc, char *argv[])
 {
 	int fd_from, fd_to;
-	ssize_t bytes_read, bytes_written;
+	ssize_t bytes_read;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
@@ -59,13 +86,7 @@ int main(int argc, char *argv[])
 		if (bytes_read == 0)
 			break;
 
-		bytes_written = write(fd_to, buffer, bytes_read);
-		if (bytes_written == -1 || bytes_written != bytes_read)
-		{
-			close(fd_from);
-			close(fd_to);
-			error_exit(99, "Error: Can't write to %s\n", argv[2]);
-		}
+		write_all(fd_to, argv[2], buffer, bytes_read);
 	}
 
 	if (close(fd_from) == -1)
